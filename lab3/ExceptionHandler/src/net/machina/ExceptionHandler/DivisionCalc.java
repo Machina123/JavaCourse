@@ -32,7 +32,7 @@ public class DivisionCalc {
         StringTokenizer tokenizer = new StringTokenizer(data);
         int num1 = Integer.parseInt(tokenizer.nextToken());
         int num2 = Integer.parseInt(tokenizer.nextToken());
-        if(num2 == 0) throw new EndOfFileException();
+        if(num2 == 0) throw new DivisionByZeroException();
         return (double)num1 / num2;
     }
 
