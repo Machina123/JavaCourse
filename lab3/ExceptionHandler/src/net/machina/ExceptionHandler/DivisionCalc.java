@@ -2,7 +2,6 @@ package net.machina.ExceptionHandler;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FilenameFilter;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -12,7 +11,7 @@ public class DivisionCalc {
         try (Scanner sc = new Scanner(new File("liczby.dat"))) {
             while(true) {
                 try {
-                    compute(sc);
+                    System.out.println(compute(sc));
                 } catch (DivisionByZeroException dbze) {
                     System.out.println(dbze.getMessage());
                     continue;
