@@ -4,7 +4,8 @@ public class Circle extends Figure {
 
     private double radius;
 
-    public Circle(double radius) {
+    public Circle(double radius) throws NonPositiveValueException{
+        if(radius <= 0) throw new NonPositiveValueException();
         this.radius = radius;
         setKind("Koło");
     }
@@ -19,4 +20,8 @@ public class Circle extends Figure {
         return 2 * Math.PI * radius;
     }
 
+    @Override
+    public void rescale(double scale) {
+        radius *= scale;
+    }
 }

@@ -3,7 +3,8 @@ package net.machina.InheritanceDemo.figures;
 public class Rectangle extends Figure {
     private double width, height;
 
-    public Rectangle(double width, double height) {
+    public Rectangle(double width, double height) throws NonPositiveValueException{
+        if(width <= 0 || height <= 0) throw new NonPositiveValueException();
         this.width = width;
         this.height = height;
         setKind("Prostokąt");
