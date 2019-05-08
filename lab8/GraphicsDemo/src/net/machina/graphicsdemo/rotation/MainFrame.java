@@ -1,12 +1,9 @@
 package net.machina.graphicsdemo.rotation;
 
-import sun.tools.tree.BooleanExpression;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
-import java.awt.geom.Point2D;
 
 public class MainFrame extends JFrame {
 
